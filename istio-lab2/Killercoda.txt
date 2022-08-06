@@ -20,18 +20,36 @@ node01         Ready    <none>          89d   v1.24.0   172.30.2.2    <none>    
 
 Para acceder al servicio, en "Traffic Port Accesor" es necesario apuntar al puerto 30718 de cualquiera de los hosts
 
-Acceder a grafana
+Acceder a Grafana
 =================
 Para acceder al servicio de Grafana, primero ejecutar el patch como se indica en Install-Istio-addons.txt y luego obtener el Nodeport con el comando:
 
-kubectl get svc grafana -n istio-system
+# k get svc grafana -n istio-system
+NAME      TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+grafana   NodePort   10.111.88.173   <none>        3000:30324/TCP   8m33s
 
-Para acceder al servicio, en "Traffic Port Accesor" es necesario apuntar al puerto resultante de cualquiera de los hosts
+Para acceder al servicio, en la lista desplegable del navegador del escenario, seleccionar "Traffic / Ports".
+En "Traffic Port Accesor" abrir el puerto indicado luego de ":" en PORT(S) en cualquiera de los hosts
 
-Acceder a grafana
+Acceder a Kiali
 =================
 Para acceder al servicio de Kiali, primero ejecutar el patch como se indica en Install-Istio-addons.txt y luego obtener el Nodeport con el comando:
 
-kubectl get svc kiali -n istio-system
+# k get svc kiali -n istio-system
+NAME    TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)                          AGE
+kiali   NodePort   10.104.199.238   <none>        20001:32285/TCP,9090:31112/TCP   12m
 
-Para acceder al servicio, en "Traffic Port Accesor" es necesario apuntar al puerto resultante de cualquiera de los hosts
+Para acceder al servicio, en la lista desplegable del navegador del escenario, seleccionar "Traffic / Ports".
+En "Traffic Port Accesor" abrir el puerto indicado luego de ":" en PORT(S) en cualquiera de los hosts
+
+
+Acceder a Zipkin
+=================
+Para acceder al servicio de Kiali, primero ejecutar el patch como se indica en Install-Istio-addons.txt y luego obtener el Nodeport con el comando:
+
+# k get svc zipkin -n istio-system
+NAME     TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+zipkin   NodePort   10.98.41.197   <none>        9411:32536/TCP   13m
+
+Para acceder al servicio, en la lista desplegable del navegador del escenario, seleccionar "Traffic / Ports".
+En "Traffic Port Accesor" abrir el puerto indicado luego de ":" en PORT(S) en cualquiera de los hosts

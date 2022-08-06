@@ -20,3 +20,8 @@ Publicar Kiali con Nodeport
 =============================
 # kubectl patch svc kiali -n istio-system -p '{"spec":{"type":"NodePort"}}'
 # kubectl get svc kiali -n istio-system
+
+Publicar Zipkin con Nodeport
+=============================
+# kubectl patch svc zipkin -n istio-system -p '{"spec":{"type":"NodePort"}}'
+# kubectl get svc zipkin -n istio-system
