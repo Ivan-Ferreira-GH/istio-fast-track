@@ -8,12 +8,12 @@ Ejecutar el comando:
 # kubectl apply -f samples/addons
 
 
-Publicar Zipkin con Nodeport
+Publicar Grafana con Nodeport
 =============================
 # kubectl patch svc grafana -n istio-system -p '{"spec":{"type":"NodePort"}}'
 # kubectl get svc grafana -n istio-system
 
-Publicar Zipkin con Nodeport
+Publicar Kiali con Nodeport
 =============================
-# kubectl patch svc zipkin -n istio-system -p '{"spec":{"type":"NodePort"}}'
-# kubectl get svc zipkin -n istio-system
+# kubectl patch svc kiali -n istio-system -p '{"spec":{"type":"NodePort"}}'
+# kubectl get svc kiali -n istio-system

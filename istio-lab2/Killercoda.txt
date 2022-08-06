@@ -27,3 +27,11 @@ Para acceder al servicio de Grafana, primero ejecutar el patch como se indica en
 kubectl get svc grafana -n istio-system
 
 Para acceder al servicio, en "Traffic Port Accesor" es necesario apuntar al puerto resultante de cualquiera de los hosts
+
+Acceder a grafana
+=================
+Para acceder al servicio de Kiali, primero ejecutar el patch como se indica en Install-Istio-addons.txt y luego obtener el Nodeport con el comando:
+
+kubectl get svc kiali -n istio-system
+
+Para acceder al servicio, en "Traffic Port Accesor" es necesario apuntar al puerto resultante de cualquiera de los hosts
