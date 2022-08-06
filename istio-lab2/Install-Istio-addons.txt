@@ -4,8 +4,11 @@ Instalacion de Prometheus, Grafana, Kiali
 Ir al directorio de instalacion de Istio
 # cd istio-version
 
-Ejecutar el comando:
-# kubectl apply -f samples/addons
+Ejecutar los comandos:
+# kubectl apply -f samples/addons/prometheus.yaml
+# kubectl apply -f samples/addons/grafana.yaml
+# kubectl apply -f samples/addons/kiali.yaml
+# kubectl apply -f samples/addons/extras/zipkin.yaml
 
 
 Publicar Grafana con Nodeport
