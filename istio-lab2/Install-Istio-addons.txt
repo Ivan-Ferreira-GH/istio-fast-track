@@ -1,8 +1,14 @@
 Instalacion de Prometheus, Grafana, Kiali
-#########################################
+=========================================
 
 Ir al directorio de instalacion de Istio
 # cd istio-version
 
 Ejecutar el comando:
 # kubectl apply -f samples/addons
+
+
+Publicar grafana con Nodeport
+=============================
+# kubectl get svc grafana -n istio-system
+# kubectl patch svc grafana -n istio-system -p '{"spec":{"type":"NodePort"}}'
