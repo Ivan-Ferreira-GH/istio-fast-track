@@ -1,0 +1,8 @@
+Instalacion de Prometheus, Grafana, Kiali
+#########################################
+
+Ir al directorio de instalacion de Istio
+# cd istio-version
+
+Ejecutar el comando:
+# kubectl apply -f samples/addons
